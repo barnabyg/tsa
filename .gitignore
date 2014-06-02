@@ -1,0 +1,8 @@
+/.settings
+/target
+/.checkstyle
+/.classpath
+/.pmd
+/.project
+/tsadb.properties
+/tsadb.script
