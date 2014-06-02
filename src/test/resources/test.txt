@@ -1,0 +1,2 @@
+Test file containing some text.
+In two lines.

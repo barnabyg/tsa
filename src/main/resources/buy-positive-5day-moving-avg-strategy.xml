@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="strategy.xsd">
+ <indicator-direction-rule>
+  <indicator>
+   <name>FIVE_DAY_AVERAGE_DIRECTION</name>
+   <operation>RISING</operation>
+  </indicator>
+  <trade>
+   <instrument>BP.L</instrument>
+   <type>BUY</type>
+   <quantity>1</quantity>
+  </trade>
+ </indicator-direction-rule>
+</rules>

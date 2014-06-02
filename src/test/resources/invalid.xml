@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="strategy.xsd">
+ <rule>
+  <indicator>
+   <name>FIVE_DAY_AVERAGE</name>
+   <operation>GREATER</operation>
+   <value>0</value>
+   <trade>
+    <instrument>BP.L</instrument>
+    <type>buy</type>
+    <quantity>1</quantity>
+   </trade>
+  </indicator>
+ </rule>
+ <rule>
+  <indicator>
+   <operation>LESS</operation>
+   <value>0</value>
+   <trade>
+    <instrument>BP.L</instrument>
+    <type>sell</type>
+    <quantity>1</quantity>
+   </trade>
+  </indicator>
+ </rule>
+</rules>

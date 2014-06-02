@@ -1,0 +1,4 @@
+<h2>Getting Started</h2>
+<p>To get started with TSA you need at least two things: a dataset and a trading strategy.</p>
+<p>There are several preloaded datasets that you can use. These include FTSE 100 index data for specific years and data for some popular instruments. You can also upload your own dataset, just provide a CSV (comma separated value) file in one of the supported formats. See the help pages for details.</p>
+<p>There are also some preloaded strategies, but these are really just for testing purposes. You will want to define your own trading strategy based on one or more <em>rules</em>. You can do this within TSA or you can create your strategy as an XML file and upload it.</p>

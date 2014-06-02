@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:mvc="http://www.springframework.org/schema/mvc"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+
+ <!-- Enabling Spring beans auto-discovery -->
+ <context:component-scan base-package="com.blizzardtec.tsa" />
+
+ <!-- Enabling Spring MVC configuration through annotations -->
+ <mvc:annotation-driven />
+
+ <bean id="viewResolver"
+  class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+  <property name="viewClass">
+   <value>
+    org.springframework.web.servlet.view.tiles3.TilesView
+   </value>
+  </property>
+ </bean>
+ <bean id="tilesConfigurer"
+  class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+  <property name="definitions">
+   <list>
+    <value>/WEB-INF/tiles.xml</value>
+   </list>
+  </property>
+ </bean>
+
+ <bean id="exceptionResolver"
+  class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+  <property name="exceptionMappings">
+   <props>
+    <prop key="java.lang.Throwable">error</prop>
+   </props>
+  </property>
+ </bean>
+
+ <bean id="multipartResolver"
+  class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+ <bean id="messageSource"
+  class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+  <property name="basenames">
+   <list>
+    <value>classpath:messages</value>
+   </list>
+  </property>
+ </bean>
+
+ <bean id="businessDelegate" class="com.blizzardtec.tsa.BusinessDelegateImpl" />
+
+ <!-- Data source -->
+ <bean id="dataSource"
+  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+  <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+<!--   <property name="url" value="jdbc:hsqldb:mem:devDB;hsqldb.sqllog=0;hsqldb.applog=0" /> -->
+  <property name="url" value="jdbc:hsqldb:file:tsadb;shutdown=true;hsqldb.sqllog=0;hsqldb.applog=0" />
+  <property name="username" value="SA" />
+  <property name="password" value="" />
+ </bean>
+
+ <bean id="sessionFactory"
+  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+  destroy-method="destroy">
+  <property name="dataSource" ref="dataSource" />
+  <property name="packagesToScan" value="com.blizzardtec.tsa.model" />
+  <property name="hibernateProperties">
+   <props>
+    <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+    <prop key="hibernate.hbm2ddl.auto">update</prop>
+    <prop key="hibernate.show_sql">false</prop>
+   </props>
+  </property>
+ </bean>
+
+ <bean id="datasetDao" class="com.blizzardtec.tsa.dao.DatasetDaoImpl">
+  <constructor-arg>
+   <value>com.blizzardtec.tsa.model.Dataset</value>
+  </constructor-arg>
+ </bean>
+
+ <bean id="strategyXmlDao" class="com.blizzardtec.tsa.dao.StrategyXmlDaoImpl">
+  <constructor-arg>
+   <value>com.blizzardtec.tsa.model.StrategyXml</value>
+  </constructor-arg>
+ </bean>
+
+ <bean id="ruleXmlDao" class="com.blizzardtec.tsa.dao.RuleXmlDaoImpl">
+  <constructor-arg>
+   <value>com.blizzardtec.tsa.model.RuleXml</value>
+  </constructor-arg>
+ </bean>
+
+ <bean id="resultsetDao" class="com.blizzardtec.tsa.dao.ResultsetDaoImpl">
+  <constructor-arg>
+   <value>com.blizzardtec.tsa.model.Resultset</value>
+  </constructor-arg>
+ </bean>
+
+ <bean id="streamAdapter" class="com.blizzardtec.tsa.StreamAdapterImpl" />
+
+ <bean id="datasetHelper" class="com.blizzardtec.tsa.data.DatasetHelperImpl" />
+
+ <bean id="strategyHelper" class="com.blizzardtec.tsa.strategy.StrategyHelperImpl" />
+
+ <bean id="resultsetHelper" class="com.blizzardtec.tsa.analysis.ResultsetHelperImpl" />
+
+ <bean id="indicatorHelper" class="com.blizzardtec.tsa.indicator.IndicatorHelperImpl" />
+
+ <bean id="ruleHelper" class="com.blizzardtec.tsa.rules.RuleHelperImpl" />
+
+ <bean id="visualisationHelper" class="com.blizzardtec.tsa.visualisation.VisualisationHelperImpl" />
+
+ <bean id="tradingAnalyser" class="com.blizzardtec.tsa.analysis.TradingAnalyserImpl" />
+
+ <bean id="dataAdapter" class="com.blizzardtec.tsa.data.StandardDataAdapter" />
+
+ <bean id="preload" class="com.blizzardtec.tsa.preload.Preloader" />
+
+</beans>

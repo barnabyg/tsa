@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+ <definition name="base.definition" template="/WEB-INF/views/layout/layout.jsp">
+  <put-attribute name="title" value="" />
+  <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+  <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" />
+  <put-attribute name="bodytitle" value="/WEB-INF/views/layout/bodytitle.jsp" />
+  <put-attribute name="body" value="" />
+  <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+ </definition>
+
+ <definition name="error" extends="base.definition">
+  <put-attribute name="title" value="Error" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/error.jsp"/>
+ </definition>
+
+ <definition name="home" extends="base.definition">
+  <put-attribute name="title" value="Home" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+ </definition>
+
+ <definition name="help" extends="base.definition">
+  <put-attribute name="title" value="Help" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/help.jsp" />
+ </definition>
+
+ <definition name="contact" extends="base.definition">
+  <put-attribute name="title" value="Contact" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/contact.jsp" />
+ </definition>
+
+ <definition name="dataset_upload_form" extends="base.definition">
+  <put-attribute name="title" value="Upload a dataset" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/dataset_upload_form.jsp" />
+ </definition>
+
+ <definition name="strategy_upload_form" extends="base.definition">
+  <put-attribute name="title" value="Upload a strategy" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/strategy_upload_form.jsp" />
+ </definition>
+
+ <definition name="list" extends="base.definition">
+  <put-attribute name="title" value="Lists" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/list.jsp" />
+ </definition>
+
+ <definition name="run_results" extends="base.definition">
+  <put-attribute name="title" value="Results of a Trading Analysis" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/run_results.jsp" />
+ </definition>
+
+ <definition name="visualise" extends="base.definition">
+  <put-attribute name="title" value="Visualisation" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/visualise.jsp" />
+ </definition>
+
+ <definition name="run_configure" extends="base.definition">
+  <put-attribute name="title" value="Configure an Analysis Run" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/run_configure.jsp" />
+ </definition>
+
+ <definition name="delete_dataset" extends="base.definition">
+  <put-attribute name="title" value="Delete a Dataset" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/delete_dataset.jsp" />
+ </definition>
+
+ <definition name="delete_strategy" extends="base.definition">
+  <put-attribute name="title" value="Delete a Strategy" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/delete_strategy.jsp" />
+ </definition>
+
+ <definition name="delete_resultset" extends="base.definition">
+  <put-attribute name="title" value="Delete a Resultset" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/delete_resultset.jsp" />
+ </definition>
+
+ <definition name="delete_rule" extends="base.definition">
+  <put-attribute name="title" value="Delete a Rule" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/delete_rule.jsp" />
+ </definition>
+
+ <definition name="create_rule" extends="base.definition">
+  <put-attribute name="title" value="Create a Rule" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/create_rule.jsp" />
+ </definition>
+
+ <definition name="create_strategy" extends="base.definition">
+  <put-attribute name="title" value="Create a Strategy" cascade="true" />
+  <put-attribute name="body" value="/WEB-INF/views/create_strategy.jsp" />
+ </definition>
+
+</tiles-definitions>

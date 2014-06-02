@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:complexType name="tradetype">
+ <xs:all>
+  <xs:element name="instrument" type="xs:string"/>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="quantity" type="xs:int" minOccurs="0"/>
+ </xs:all>
+</xs:complexType>
+
+<xs:element name="rules">
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="indicator-direction-rule" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+           <xs:element name="indicator">
+            <xs:complexType>
+             <xs:all>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="operation" type="xs:string"/>
+             </xs:all>
+            </xs:complexType>
+           </xs:element>
+            <xs:element name="trade" type="tradetype"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="indicator-value-rule" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+           <xs:element name="indicator">
+            <xs:complexType>
+             <xs:all>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="operation" type="xs:string"/>
+              <xs:element name="value" type="xs:float"/>
+             </xs:all>
+            </xs:complexType>
+           </xs:element>
+            <xs:element name="trade" type="tradetype"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
