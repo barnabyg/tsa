@@ -19,24 +19,6 @@ import com.blizzardtec.tsa.data.FullDataPoint;
 public interface Indicator {
 
     /**
-     * Set of value indicator types.
-     */
-    EnumSet<IndicatorType> VALUE_INDICATORS = EnumSet.of(
-                                IndicatorType.FIVE_DAY_AVERAGE,
-                                IndicatorType.THIRTY_DAY_AVERAGE,
-                                IndicatorType.FIVE_DAY_VOLATILITY,
-                                IndicatorType.THIRTY_DAY_VOLATILITY);
-
-    /**
-     * Set of direction indicator types.
-     */
-    EnumSet<IndicatorType> DIRECTION_INDICATORS = EnumSet.of(
-                                IndicatorType.FIVE_DAY_AVERAGE_DIRECTION,
-                                IndicatorType.THIRTY_DAY_AVERAGE_DIRECTION,
-                                IndicatorType.FIVE_DAY_VOLATILITY_DIRECTION,
-                                IndicatorType.THIRTY_DAY_VOLATILITY_DIRECTION);
-
-    /**
      * Types of indicator.
      * @author Barnaby Golden
      *
@@ -78,6 +60,24 @@ public interface Indicator {
          * average of volatility.
          */
         THIRTY_DAY_VOLATILITY_DIRECTION }
+
+    /**
+     * Set of value indicator types.
+     */
+    EnumSet<IndicatorType> VALUE_INDICATORS = EnumSet.of(
+                                IndicatorType.FIVE_DAY_AVERAGE,
+                                IndicatorType.THIRTY_DAY_AVERAGE,
+                                IndicatorType.FIVE_DAY_VOLATILITY,
+                                IndicatorType.THIRTY_DAY_VOLATILITY);
+
+    /**
+     * Set of direction indicator types.
+     */
+    EnumSet<IndicatorType> DIRECTION_INDICATORS = EnumSet.of(
+                                IndicatorType.FIVE_DAY_AVERAGE_DIRECTION,
+                                IndicatorType.THIRTY_DAY_AVERAGE_DIRECTION,
+                                IndicatorType.FIVE_DAY_VOLATILITY_DIRECTION,
+                                IndicatorType.THIRTY_DAY_VOLATILITY_DIRECTION);
 
     /**
      * Enrich the provided list of data points
