@@ -10,9 +10,16 @@
  <name>tsa</name>
  <url>http://maven.apache.org</url>
 
+  <prerequisites>
+    <maven>3.0.1</maven>
+  </prerequisites>
+
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  <cobertura.version>2.6</cobertura.version>
+  <pmd.version>3.1</pmd.version>
+  <checkstyle.version>2.12.1</checkstyle.version>
  </properties>
 
  <build>
@@ -22,10 +29,10 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.1</version>
     <configuration>
-     <source>1.7</source>
-     <target>1.7</target>
-     <testSource>1.7</testSource>
-     <testTarget>1.7</testTarget>
+     <source>1.8</source>
+     <target>1.8</target>
+     <testSource>1.8</testSource>
+     <testTarget>1.8</testTarget>
     </configuration>
    </plugin>
    <plugin>
@@ -91,7 +98,7 @@
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-pmd-plugin</artifactId>
-    <version>3.0.1</version>
+    <version>${pmd.version}</version>
     <configuration>
      <targetJdk>1.7</targetJdk>
     </configuration>
@@ -108,7 +115,7 @@
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-checkstyle-plugin</artifactId>
-    <version>2.10</version>
+    <version>${checkstyle.version}</version>
     <configuration>
      <enableRulesSummary>false</enableRulesSummary>
      <excludes>**/*.exe</excludes>
@@ -130,7 +137,7 @@
    <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>cobertura-maven-plugin</artifactId>
-    <version>2.5.2</version>
+    <version>${cobertura.version}</version>
     <configuration>
      <instrumentation>
       <ignores>
@@ -200,7 +207,7 @@
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-pmd-plugin</artifactId>
-    <version>3.0.1</version>
+    <version>${pmd.version}</version>
     <configuration>
      <targetJdk>1.7</targetJdk>
     </configuration>
@@ -208,7 +215,7 @@
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-checkstyle-plugin</artifactId>
-    <version>2.10</version>
+    <version>${checkstyle.version}</version>
     <configuration>
      <configLocation>${basedir}/src/main/resources/barnaby-checkstyle-config.xml</configLocation>
     </configuration>
@@ -216,7 +223,7 @@
    <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>cobertura-maven-plugin</artifactId>
-    <version>2.5.2</version>
+    <version>${cobertura.version}</version>
     <configuration>
      <formats>
       <format>html</format>
@@ -273,7 +280,7 @@
   <dependency>
    <groupId>org.seleniumhq.selenium</groupId>
    <artifactId>selenium-java</artifactId>
-   <version>2.37.0</version>
+   <version>2.42.0</version>
   </dependency>
   <dependency>
    <groupId>junit</groupId>

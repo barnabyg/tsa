@@ -50,7 +50,14 @@ public class TestBase {
      * @return URL
      */
     public static String getUrl() {
-        return BASE_URL + ":" + APP_PORT + "/";
+        boolean useGrid = false;
+
+        String retVal = "http://localhost" + ":" + APP_PORT + "/";
+
+        if (useGrid) {
+            retVal = BASE_URL + ":" + APP_PORT + "/";
+        }
+        return retVal;
     }
 
     /**

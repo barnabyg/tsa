@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -50,17 +51,23 @@ public class FeatureSteps {
      */
     protected final WebDriver getDriver() {
 
+        boolean useGrid = false;
+
         if (driver == null) {
 
-            DesiredCapabilities capability = DesiredCapabilities.firefox();
+            if (useGrid) {
+                DesiredCapabilities capability = DesiredCapabilities.firefox();
 
-            try {
-                driver = new RemoteWebDriver(
-                     new URL(TestBase.GRID_URL),
-                     capability);
+                try {
+                    driver = new RemoteWebDriver(
+                         new URL(TestBase.GRID_URL),
+                         capability);
 
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                driver = new FirefoxDriver();
             }
         }
 
