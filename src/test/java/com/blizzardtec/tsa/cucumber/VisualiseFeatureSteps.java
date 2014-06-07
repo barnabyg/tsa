@@ -172,7 +172,7 @@ public final class VisualiseFeatureSteps
 
         // clean up the strategy
 
-        getDriver().get(TestBase.BASE_URL
+        getDriver().get(TestBase.getUrl()
                 + format(BaseController.DEL_STRATEGY_FORM_ACTION));
 
         Thread.sleep(TestBase.DELAY);

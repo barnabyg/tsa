@@ -29,17 +29,15 @@ public class TestBase {
      * Test instrument name.
      */
     public static final String INSTRUMENT = "BP.L";
-
     /**
      * URL of the Selenium grid.
      */
     public static final String GRID_URL
-                    = "http://server1.bhgagile.com:4444/wd/hub";
-
+                    = "http://grid.bhgagile.com:4444/wd/hub";
     /**
      * Base URL.
      */
-    public static final String BASE_URL = "http://server1.bhgagile.com";
+    public static final String BASE_URL = "http://localhost";
     /**
      * Port the application will run on.
      */
@@ -57,6 +55,7 @@ public class TestBase {
         if (useGrid) {
             retVal = BASE_URL + ":" + APP_PORT + "/";
         }
+
         return retVal;
     }
 
