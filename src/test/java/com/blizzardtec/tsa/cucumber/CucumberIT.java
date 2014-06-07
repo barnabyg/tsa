@@ -18,7 +18,6 @@ import cucumber.api.junit.Cucumber;
         "junit:target/cucumber-junit-report/allcukes.xml",
         "html:target/cucumber",
         "json:target/cucumber.json" },
-        tags = { "@analysis" },
         monochrome = true)
 public final class CucumberIT {
 
