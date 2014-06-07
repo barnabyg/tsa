@@ -39,7 +39,7 @@ public final class ResultsetDaoImpl
         final String queryString = "select r.name from "
                             + Resultset.class.getName() + " r";
 
-        list = getHibernateTemplate().find(queryString);
+        list = (List<String>) getHibernateTemplate().find(queryString);
 
         return list;
     }

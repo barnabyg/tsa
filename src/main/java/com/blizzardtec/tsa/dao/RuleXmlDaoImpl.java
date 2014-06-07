@@ -32,7 +32,7 @@ public final class RuleXmlDaoImpl
     @Override
     public RuleXml findByName(final String ruleName) {
 
-        final List<RuleXml> list = getHibernateTemplate().find(
+        final List<RuleXml> list = (List<RuleXml>) getHibernateTemplate().find(
                 "from " + RuleXml.class.getName()
                    + " r where r.name = ?", ruleName);
 
@@ -57,7 +57,7 @@ public final class RuleXmlDaoImpl
         final String queryString = "select r.name from "
                             + RuleXml.class.getName() + " r";
 
-        list = getHibernateTemplate().find(queryString);
+        list = (List<String>) getHibernateTemplate().find(queryString);
 
         return list;
     }

@@ -32,7 +32,8 @@ public final class StrategyXmlDaoImpl
     @SuppressWarnings("unchecked")
     public StrategyXml findByName(final String strategyName) {
 
-        final List<StrategyXml> list = getHibernateTemplate().find(
+        final List<StrategyXml> list =
+             (List<StrategyXml>) getHibernateTemplate().find(
                 "from " + StrategyXml.class.getName()
                    + " s where s.name = ?", strategyName);
 
@@ -57,7 +58,7 @@ public final class StrategyXmlDaoImpl
         final String queryString = "select s.name from "
                             + StrategyXml.class.getName() + " s";
 
-        list = getHibernateTemplate().find(queryString);
+        list = (List<String>) getHibernateTemplate().find(queryString);
 
         return list;
     }

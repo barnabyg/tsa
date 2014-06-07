@@ -35,7 +35,7 @@ public final class DatasetDaoImpl
 
         Dataset dataset = null;
 
-        final List<Dataset> list = getHibernateTemplate().find(
+        final List<Dataset> list = (List<Dataset>) getHibernateTemplate().find(
                 "from " + Dataset.class.getName()
                 + " d where d.datasetName = ?", datasetName);
 
@@ -61,7 +61,7 @@ public final class DatasetDaoImpl
                "select distinct d.datasetName from "
                            + Dataset.class.getName() + " d";
 
-        list = getHibernateTemplate().find(queryString);
+        list = (List<String>) getHibernateTemplate().find(queryString);
 
         return list;
     }
