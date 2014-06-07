@@ -150,7 +150,7 @@ public static final String FALLING_STRATEGY_FILE
   /**
    * Timeout.
    */
-  public static final int TIMEOUT = 10;
+  public static final int TIMEOUT = 120;
   /**
    * Standard data type.
    */
