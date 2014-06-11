@@ -152,7 +152,7 @@ public final class VisualiseController extends BaseController {
 
         } catch (IOException ioe) {
             LOG.error("IO error when generating chart with name \""
-                    + runId + "\" error: " + ioe.getMessage());
+                    + runId + "\" error: " + ioe);
         }
 
         try {
