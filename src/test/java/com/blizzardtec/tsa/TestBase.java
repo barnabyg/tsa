@@ -152,10 +152,15 @@ public static final String FALLING_STRATEGY_FILE
    */
   public static final int TIMEOUT = 240;
   /**
-   * Time to wait for a chart to load.
+   * Time to wait for a chart to load in CI profile.
    * Necessary due to loading in an iFrame.
    */
-  public static final int CHART_TIMEOUT = 40000;
+  public static final int CHART_TIMEOUT_CI = 40000;
+  /**
+   * Time to wait for a chart to load in local profile.
+   * Necessary due to loading in an iFrame.
+   */
+  public static final int CHART_TIMEOUT_LOCAL = 500;
   /**
    * Standard data type.
    */

@@ -121,4 +121,23 @@ public class FeatureSteps {
 
         wait.until(pageLoadCondition);
     }
+
+    /**
+     * Return the delay needed while a chart is loading.
+     * @return delay in ms
+     */
+    protected final int getChartDelay() {
+
+        final String profile = System.getProperty("profile");
+
+        int timeout;
+
+        if (profile.equalsIgnoreCase("local")) {
+            timeout = TestBase.CHART_TIMEOUT_LOCAL;
+        } else {
+            timeout = TestBase.CHART_TIMEOUT_CI;
+        }
+
+        return timeout;
+    }
 }

@@ -114,7 +114,7 @@ public final class AddStrategyFeatureSteps extends FeatureSteps {
 
         hitSubmit("analysisSubmit");
 
-        Thread.sleep(TestBase.CHART_TIMEOUT);
+        Thread.sleep(getChartDelay());
     }
 
     /**

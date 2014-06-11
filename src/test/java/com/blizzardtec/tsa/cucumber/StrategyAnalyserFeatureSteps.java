@@ -157,7 +157,7 @@ public final class StrategyAnalyserFeatureSteps
 
         hitSubmit("analysisSubmit");
 
-        Thread.sleep(TestBase.CHART_TIMEOUT);
+        Thread.sleep(getChartDelay());
     }
 
     /**

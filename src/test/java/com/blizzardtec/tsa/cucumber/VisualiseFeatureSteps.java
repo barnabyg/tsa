@@ -111,7 +111,7 @@ public final class VisualiseFeatureSteps
 
         hitSubmit("analysisSubmit");
 
-        Thread.sleep(TestBase.CHART_TIMEOUT);
+        Thread.sleep(getChartDelay());
 
         final WebElement element =
                 getDriver().findElement(By.id("runId"));
