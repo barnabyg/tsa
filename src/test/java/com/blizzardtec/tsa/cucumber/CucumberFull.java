@@ -1,5 +1,5 @@
 /**
- *
+ * Run the full suite of Cucumber integration tests.
  */
 package com.blizzardtec.tsa.cucumber;
 
@@ -19,6 +19,6 @@ import cucumber.api.junit.Cucumber;
         "html:target/cucumber",
         "json:target/cucumber.json" },
         monochrome = true)
-public final class CucumberIT {
+public final class CucumberFull {
 
 }
