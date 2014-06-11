@@ -14,8 +14,8 @@ import java.io.Serializable;
  *
  * @author Barnaby Golden
  *
- * @param <T>
- * @param <P>
+ * @param <T> entity
+ * @param <P> id
  */
 public interface GenericDao<T, P extends Serializable> {
 

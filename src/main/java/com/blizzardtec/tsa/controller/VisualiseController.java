@@ -142,14 +142,15 @@ public final class VisualiseController extends BaseController {
 
             ChartUtilities.writeChartAsPNG(
                     response.getOutputStream(), chart, WIDTH, HEIGHT);
+
             response.getOutputStream().close();
 
         } catch (DelegateException de) {
-            LOG.error("Delegate error when generating chart with name "
-                            + runId + " error was: " + de.getMessage());
+            LOG.error("Delegate error when generating chart \""
+                            + runId + "\" error: " + de.getMessage());
         } catch (IOException ioe) {
-            LOG.error("IO error when generating chart with name "
-                    + runId + " error was: " + ioe.getMessage());
+            LOG.error("IO error when generating chart with name \""
+                    + runId + "\" error: " + ioe.getMessage());
         }
     }
 }
