@@ -146,7 +146,7 @@ public static final String FALLING_STRATEGY_FILE
   /**
    * Delay in ms.
    */
-  public static final int DELAY = 400;
+  public static final int DELAY = 200;
   /**
    * Timeout.
    */
