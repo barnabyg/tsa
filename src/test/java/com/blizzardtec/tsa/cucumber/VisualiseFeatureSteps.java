@@ -111,6 +111,8 @@ public final class VisualiseFeatureSteps
 
         hitSubmit("analysisSubmit");
 
+        Thread.sleep(TestBase.CHART_TIMEOUT);
+
         final WebElement element =
                 getDriver().findElement(By.id("runId"));
 

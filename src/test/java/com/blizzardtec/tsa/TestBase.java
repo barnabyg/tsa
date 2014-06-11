@@ -152,6 +152,11 @@ public static final String FALLING_STRATEGY_FILE
    */
   public static final int TIMEOUT = 120;
   /**
+   * Time to wait for a chart to load.
+   * Necessary due to loading in an iFrame.
+   */
+  public static final int CHART_TIMEOUT = 20000;
+  /**
    * Standard data type.
    */
   public static final String STD_DATA_TYPE = "STANDARD_CSV";

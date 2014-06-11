@@ -113,6 +113,8 @@ public final class AddStrategyFeatureSteps extends FeatureSteps {
         fillField("startingFunds", Float.toString(TestBase.STARTING_FUNDS));
 
         hitSubmit("analysisSubmit");
+
+        Thread.sleep(TestBase.CHART_TIMEOUT);
     }
 
     /**

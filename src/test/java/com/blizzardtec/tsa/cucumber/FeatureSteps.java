@@ -11,15 +11,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
-//import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.blizzardtec.tsa.TestBase;
@@ -110,9 +109,16 @@ public class FeatureSteps {
 
         element.sendKeys(Keys.RETURN);
 
-        (new WebDriverWait(getDriver(), TestBase.TIMEOUT)).until(
-                ExpectedConditions.stalenessOf(element));
+        ExpectedCondition<Boolean> pageLoadCondition = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(final WebDriver driver) {
+                        return ((JavascriptExecutor) driver).executeScript(
+                               "return document.readyState").equals("complete");
+                    }
+                };
 
-        Thread.sleep(TestBase.DELAY);
+        WebDriverWait wait = new WebDriverWait(driver, TestBase.TIMEOUT);
+
+        wait.until(pageLoadCondition);
     }
 }
