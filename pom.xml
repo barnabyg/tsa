@@ -220,7 +220,7 @@
               </systemPropertyVariables>
               <argLine>-Xmx1024m</argLine>
               <includes>
-                <include>**/CucumberFull.java</include>
+                <include>**/CucumberLite.java</include>
               </includes>
             </configuration>
             <executions>
