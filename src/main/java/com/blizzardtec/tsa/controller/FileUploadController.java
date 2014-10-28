@@ -38,6 +38,7 @@ import com.blizzardtec.tsa.form.FileUploadForm;
  * @author Barnaby Golden
  *
  */
+@SuppressWarnings("PMD.UnusedPrivateMethod")
 @Controller
 public final class FileUploadController extends BaseController {
 
