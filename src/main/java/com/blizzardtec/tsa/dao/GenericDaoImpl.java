@@ -11,7 +11,8 @@ import java.io.Serializable;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Generic ORM DAO implementation.
@@ -21,6 +22,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
  * @param <T> param
  * @param <P> param
  */
+@Transactional(readOnly = false)
 public class GenericDaoImpl<T, P extends Serializable>
                                     implements GenericDao<T, P> {
 

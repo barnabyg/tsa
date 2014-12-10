@@ -366,7 +366,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
     </dependency>
     <dependency>
       <groupId>commons-fileupload</groupId>
@@ -386,12 +386,17 @@
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jta_1.1_spec</artifactId>
-      <version>1.1</version>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>5.2.0.Alpha1</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>3.6.9.Final</version>
+      <version>4.3.7.Final</version>
       <exclusions>
         <exclusion>
           <groupId>xml-apis</groupId>
@@ -404,11 +409,6 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>5.0.1.Final</version>
-    </dependency>
-    <dependency>
       <groupId>javassist</groupId>
       <artifactId>javassist</artifactId>
       <version>3.12.1.GA</version>
@@ -416,7 +416,7 @@
     <dependency>
       <groupId>org.jfree</groupId>
       <artifactId>jfreechart</artifactId>
-      <version>1.0.17</version>
+      <version>1.0.19</version>
       <exclusions>
         <exclusion>
           <groupId>xml-apis</groupId>
@@ -431,13 +431,13 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
+      <version>3.0-alpha-1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-extras</artifactId>
-      <version>3.0.1</version>
+      <version>3.0.5</version>
       <exclusions>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -448,7 +448,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.5</version>
+      <version>1.7.7</version>
     </dependency>
     <dependency>
       <groupId>org.hsqldb</groupId>
@@ -459,6 +459,16 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
       <version>3.3</version>
+    </dependency>
+    <dependency>
+       <groupId>javax.el</groupId>
+       <artifactId>javax.el-api</artifactId>
+       <version>3.0.1-b04</version>
+    </dependency>
+    <dependency>
+       <groupId>org.glassfish.web</groupId>
+       <artifactId>javax.el</artifactId>
+       <version>2.2.6</version>
     </dependency>
   </dependencies>
 </project>
