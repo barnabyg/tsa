@@ -399,12 +399,12 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>5.2.0.Alpha1</version>
+      <version>5.2.0.CR1</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>4.3.7.Final</version>
+      <version>4.3.10.Final</version>
       <exclusions>
         <exclusion>
           <groupId>xml-apis</groupId>
