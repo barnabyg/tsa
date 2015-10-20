@@ -23,7 +23,7 @@ public interface DatasetHelper {
      * @author Barnaby Golden
      *
      */
-    public enum DataType { STANDARD_CSV, YAHOO_CSV }
+    enum DataType { STANDARD_CSV, YAHOO_CSV }
 
     /**
      * Parse a list of strings and turn them in to a dataset.

@@ -22,7 +22,7 @@ public interface VisualisationHelper {
      * @author Barnaby Golden
      *
      */
-    public enum ChartType {
+    enum ChartType {
         /**
          * s.
          */

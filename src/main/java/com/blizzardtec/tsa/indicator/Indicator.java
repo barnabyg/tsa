@@ -23,7 +23,7 @@ public interface Indicator {
      * @author Barnaby Golden
      *
      */
-    public enum IndicatorType {
+    enum IndicatorType {
         /**
          * Five day moving average of mid price.
          */

@@ -47,7 +47,7 @@ public interface Rule {
      * @author Barnaby Golden
      *
      */
-    public enum OperationType { RISING, FALLING, FLAT, LESS, GREATER, EQUAL }
+    enum OperationType { RISING, FALLING, FLAT, LESS, GREATER, EQUAL }
 
     /**
      * Run a rule and return a trade if the rule
