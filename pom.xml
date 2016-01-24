@@ -30,6 +30,7 @@
     <jetty.version>9.2.1.v20140609</jetty.version>
 <!--     <jetty.version>9.3.7.v20160115</jetty.version> -->
     <maven.version>3.5</maven.version>
+    <java.target>1.8</java.target>
   </properties>
 
   <build>
@@ -40,10 +41,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.version}</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <testSource>1.8</testSource>
-          <testTarget>1.8</testTarget>
+          <source>${java.target}</source>
+          <target>${java.target}</target>
+          <testSource>${java.target}</testSource>
+          <testTarget>${java.target}</testTarget>
         </configuration>
       </plugin>
 
