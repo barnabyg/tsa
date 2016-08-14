@@ -10,6 +10,7 @@ package com.blizzardtec.tsa.cucumber;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -52,6 +53,18 @@ public class FeatureSteps {
 
         boolean useGrid = false;
 
+        if (SystemUtils.IS_OS_WINDOWS) {
+            System.setProperty(
+              "webdriver.gecko.driver", "src/test/resources/wires.exe");
+        } else {
+            System.setProperty(
+              "webdriver.gecko.driver", "src/test/resources/wires");
+        }
+
+        final DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+
+        capabilities.setCapability("marionette", true);
+
         if (driver == null) {
 
             if (useGrid) {
@@ -66,7 +79,7 @@ public class FeatureSteps {
                     e.printStackTrace();
                 }
             } else {
-                driver = new FirefoxDriver();
+                driver = new FirefoxDriver(capabilities);
             }
         }
 
