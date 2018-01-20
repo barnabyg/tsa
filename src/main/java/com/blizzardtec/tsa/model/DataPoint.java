@@ -50,68 +50,68 @@ public class DataPoint {
     /**
      * @return the id
      */
-    public final long getId() {
+    public long getId() {
         return id;
     }
     /**
      * @param id the id to set
      */
-    public final void setId(final long id) {
+    public void setId(final long id) {
         this.id = id;
     }
     /**
      * @return the date
      */
-    public final Date getDate() {
+    public Date getDate() {
         return date;
     }
     /**
      * @param date the date to set
      */
-    public final void setDate(final Date date) {
+    public void setDate(final Date date) {
         this.date = date;
     }
     /**
      * @return the instrument
      */
-    public final String getInstrument() {
+    public String getInstrument() {
         return instrument;
     }
     /**
      * @param instrument the instrument to set
      */
-    public final void setInstrument(final String instrument) {
+    public void setInstrument(final String instrument) {
         this.instrument = instrument;
     }
     /**
      * @return the buy
      */
-    public final float getBuy() {
+    public float getBuy() {
         return buy;
     }
     /**
      * @param buy the buy to set
      */
-    public final void setBuy(final float buy) {
+    public void setBuy(final float buy) {
         this.buy = buy;
     }
     /**
      * @return the sell
      */
-    public final float getSell() {
+    public float getSell() {
         return sell;
     }
     /**
      * @param sell the sell to set
      */
-    public final void setSell(final float sell) {
+    public void setSell(final float sell) {
         this.sell = sell;
     }
     /**
      * Return the midprice between buy and sell.
      * @return midprice
      */
-    public final float midprice() {
+    public float midprice() {
         float retVal = 0;
 
         if (this.buy > 0f && this.sell > 0f) {

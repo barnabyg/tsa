@@ -8,4 +8,5 @@
     <suppress checks="JavadocPackage" files="[\\/]src[\\/]test[\\/]"/>
     <suppress checks=".*" files=".*\.xlsx" />
     <suppress checks="MagicNumberCheck" files=".*Test\.java" />
+    <suppress files="DataPoint\.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>

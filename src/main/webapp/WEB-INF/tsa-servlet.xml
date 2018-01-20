@@ -71,7 +71,7 @@
  </bean>
 
  <bean id="sessionFactory"
-  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+  class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
   destroy-method="destroy">
   <property name="dataSource" ref="dataSource" />
   <property name="packagesToScan" value="com.blizzardtec.tsa.model" />
@@ -84,7 +84,7 @@
   </property>
  </bean>
 
- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+ <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
   <property name="sessionFactory" ref="sessionFactory"/>
  </bean>
 
