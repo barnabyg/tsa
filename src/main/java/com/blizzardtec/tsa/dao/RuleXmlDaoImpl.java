@@ -29,7 +29,6 @@ public final class RuleXmlDaoImpl
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
-    @Override
     public RuleXml findByName(final String ruleName) {
 
         final List<RuleXml> list = (List<RuleXml>) getHibernateTemplate().find(
@@ -49,7 +48,6 @@ public final class RuleXmlDaoImpl
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
-    @Override
     public List<String> findAllRuleNames() {
 
         List<String> list;

@@ -29,7 +29,6 @@ public final class RuleHelperImpl implements RuleHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void persistRule(final RuleXml ruleXml) {
 
         ruleDao.create(ruleXml);
@@ -38,7 +37,6 @@ public final class RuleHelperImpl implements RuleHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public List<String> listRuleNames() {
 
         return ruleDao.findAllRuleNames();
@@ -47,7 +45,6 @@ public final class RuleHelperImpl implements RuleHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void deleteRule(final String name) {
 
         final RuleXml ruleXml = ruleDao.findByName(name);
@@ -58,7 +55,6 @@ public final class RuleHelperImpl implements RuleHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public RuleXml getRule(final String name) {
 
         return ruleDao.findByName(name);

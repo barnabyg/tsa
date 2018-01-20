@@ -57,7 +57,6 @@ public final class StrategyHelperImpl implements StrategyHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public List<String> listStrategyNames() {
 
         return strategyDao.findAllStrategyNames();
@@ -66,7 +65,6 @@ public final class StrategyHelperImpl implements StrategyHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void deleteStrategy(final String name) {
 
         final StrategyXml strategy = strategyDao.findByName(name);
@@ -79,7 +77,6 @@ public final class StrategyHelperImpl implements StrategyHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public StrategyXml getStrategy(final String name) {
 
         return strategyDao.findByName(name);
@@ -88,7 +85,6 @@ public final class StrategyHelperImpl implements StrategyHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public boolean validateStrategyXml(final String xmlStrategy)
                                             throws StrategyException {
 

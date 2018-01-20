@@ -50,7 +50,6 @@ public final class StrategyXmlDaoImpl
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
-    @Override
     public List<String> findAllStrategyNames() {
 
         List<String> list;

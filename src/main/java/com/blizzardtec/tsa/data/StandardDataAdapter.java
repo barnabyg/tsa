@@ -34,7 +34,6 @@ public final class StandardDataAdapter
     /**
      * {@inheritDoc}
      */
-    @Override
     public DataPoint parseLine(final String line) throws DelegateException {
 
         final String[] fields = trimStringArray(line.split(","));

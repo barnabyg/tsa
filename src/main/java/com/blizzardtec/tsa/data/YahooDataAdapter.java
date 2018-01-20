@@ -34,7 +34,6 @@ public final class YahooDataAdapter
     /**
      * {@inheritDoc}
      */
-    @Override
     public DataPoint parseLine(final String line)
                             throws DelegateException {
 

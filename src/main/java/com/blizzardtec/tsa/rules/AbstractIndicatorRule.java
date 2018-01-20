@@ -150,7 +150,6 @@ public abstract class AbstractIndicatorRule implements Rule {
     /**
      * {@inheritDoc}
      */
-    @Override
     public final RuleXml toXml() throws RuleException {
 
         final DocumentBuilderFactory docFactory =

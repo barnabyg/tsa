@@ -31,7 +31,6 @@ public final class ResultsetDaoImpl
      * {@inheritDoc}
      */
     @SuppressWarnings("unchecked")
-    @Override
     public List<String> findAllRuns() {
 
         List<String> list;
@@ -47,7 +46,6 @@ public final class ResultsetDaoImpl
     /**
      * {@inheritDoc}
      */
-    @Override
     public Resultset findByName(final String name) {
 
         return (Resultset) getHibernateTemplate().find(

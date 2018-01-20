@@ -37,7 +37,6 @@ public final class FiveDayVolatilityIndicator
     /**
      * {@inheritDoc}
      */
-    @Override
     public void enrich(final List<FullDataPoint> list) {
 
         enrichIndicator(

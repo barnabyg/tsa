@@ -33,7 +33,6 @@ public final class ThirtyDayAverageIndicator
     /**
      * {@inheritDoc}
      */
-    @Override
     public void enrich(final List<FullDataPoint> list) {
 
         for (final FullDataPoint point: list) {

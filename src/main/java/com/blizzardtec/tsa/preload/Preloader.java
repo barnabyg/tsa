@@ -135,7 +135,6 @@ public final class Preloader
     /**
      * {@inheritDoc}
      */
-    @Override
     public void onApplicationEvent(final ContextRefreshedEvent event) {
 
         preload(ObjectType.DATASET);

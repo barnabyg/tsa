@@ -176,7 +176,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void delete(final String name, final ObjectType type) {
 
         switch (type) {
@@ -200,7 +199,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public Resultset getResultset(final String runName) {
 
         return analyserHelper.getResultset(runName);
@@ -209,7 +207,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public JFreeChart showChart(
             final ChartType type,
             final String runId)
@@ -229,7 +226,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public List<String> listNames(final ObjectType type) {
 
         List<String> list = null;
@@ -256,7 +252,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void createRule(final Rule rule) throws DelegateException {
 
         try {
@@ -269,7 +264,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public Rule getRule(final String ruleName) throws DelegateException {
 
         Rule rule = null;
@@ -286,7 +280,6 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void createStrategy(final Strategy strategy)
                                         throws DelegateException {
 

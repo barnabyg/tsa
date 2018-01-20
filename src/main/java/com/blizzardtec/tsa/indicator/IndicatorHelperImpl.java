@@ -25,7 +25,6 @@ public final class IndicatorHelperImpl implements IndicatorHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public FullDataset computeIndicators(
                         final Dataset dataset)
                                     throws IndicatorException {

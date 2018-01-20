@@ -46,7 +46,6 @@ public final class VisualisationHelperImpl implements VisualisationHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public JFreeChart showChart(
             final ChartType type,
             final String runName) throws IOException {

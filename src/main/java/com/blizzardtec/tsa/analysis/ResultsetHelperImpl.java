@@ -46,7 +46,6 @@ public final class ResultsetHelperImpl implements ResultsetHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void runAnalysis(
          final String name,
          final Dataset dataset,
@@ -75,7 +74,6 @@ public final class ResultsetHelperImpl implements ResultsetHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public Resultset getResultset(final String runName) {
 
         return resultsetDao.findByName(runName);
@@ -84,7 +82,6 @@ public final class ResultsetHelperImpl implements ResultsetHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public List<String> listResultsets() {
 
         return resultsetDao.findAllRuns();
@@ -93,7 +90,6 @@ public final class ResultsetHelperImpl implements ResultsetHelper {
     /**
      * {@inheritDoc}
      */
-    @Override
     public void deleteResultset(final String name) {
 
         final Resultset resultset = getResultset(name);
