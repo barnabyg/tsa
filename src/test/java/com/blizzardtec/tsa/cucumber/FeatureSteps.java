@@ -17,6 +17,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -61,9 +62,8 @@ public class FeatureSteps {
               "webdriver.gecko.driver", "src/test/resources/wires");
         }
 
-        final DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-
-        capabilities.setCapability("marionette", true);
+        final FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setCapability("marionette", true);
 
         if (driver == null) {
 
@@ -79,7 +79,7 @@ public class FeatureSteps {
                     e.printStackTrace();
                 }
             } else {
-                driver = new FirefoxDriver(capabilities);
+                driver = new FirefoxDriver(firefoxOptions);
             }
         }
 
