@@ -36,7 +36,7 @@ public final class DatasetDaoImpl
 
         final List<Dataset> list = (List<Dataset>) getHibernateTemplate().find(
                 "from " + Dataset.class.getName()
-                + " d where d.datasetName = ?", datasetName);
+                + " d where d.datasetName = ?0", datasetName);
 
         if (!list.isEmpty()) {
             dataset = list.get(0);

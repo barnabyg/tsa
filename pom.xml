@@ -17,20 +17,19 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <pmd.version>3.9.0</pmd.version>
+    <pmd.version>3.11.0</pmd.version>
     <checkstyle.version>3.0.0</checkstyle.version>
-    <spring.version>5.0.6.RELEASE</spring.version>
-    <hibernate.version>5.3.1.Final</hibernate.version>
+    <spring.version>5.1.5.RELEASE</spring.version>
+    <hibernate.version>5.4.1.Final</hibernate.version>
     <hsqldb.version>2.4.1</hsqldb.version>
-    <selenium.version>3.13.0</selenium.version>
+    <selenium.version>3.141.59</selenium.version>
     <cucumber.version>1.2.5</cucumber.version>
-    <surefire.version>2.22.0</surefire.version>
+    <surefire.version>3.0.0-M3</surefire.version>
     <junit.version>4.12</junit.version>
     <jetty.version>9.4.11.v20180605</jetty.version>
     <maven.version>3.5.2</maven.version>
     <mavencompiler.version>3.8.0</mavencompiler.version>
     <java.target>1.10</java.target>
-    <javadoc.version>3.0.0</javadoc.version>
     <jaxb.version>2.3.0</jaxb.version>
   </properties>
 

@@ -33,7 +33,7 @@ public final class RuleXmlDaoImpl
 
         final List<RuleXml> list = (List<RuleXml>) getHibernateTemplate().find(
                 "from " + RuleXml.class.getName()
-                   + " r where r.name = ?", ruleName);
+                   + " r where r.name = ?0", ruleName);
 
         RuleXml ruleXml = null;
 

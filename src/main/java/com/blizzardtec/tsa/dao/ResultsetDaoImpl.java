@@ -50,6 +50,6 @@ public final class ResultsetDaoImpl
 
         return (Resultset) getHibernateTemplate().find(
                 "from " + Resultset.class.getName()
-                + " r where r.name = ?", name).get(0);
+                + " r where r.name = ?0", name).get(0);
     }
 }

@@ -35,7 +35,7 @@ public final class StrategyXmlDaoImpl
         final List<StrategyXml> list =
              (List<StrategyXml>) getHibernateTemplate().find(
                 "from " + StrategyXml.class.getName()
-                   + " s where s.name = ?", strategyName);
+                   + " s where s.name = ?0", strategyName);
 
         StrategyXml strategy = null;
 
