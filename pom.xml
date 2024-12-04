@@ -147,6 +147,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>${surefire.version}</version>
             <configuration>
+<!-- -->
 <!--               <jvm>C:\java\jdk-11.0.1\bin\java</jvm> -->
               <jvm>/usr/lib/jvm/java-11-openjdk-amd64/bin/java</jvm>
               <argline>--illegal-access=permit</argline>
